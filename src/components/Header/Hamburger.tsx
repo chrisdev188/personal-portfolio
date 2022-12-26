@@ -24,7 +24,7 @@ const Bar = styled.span`
   width: var(--bar-width);
   height: var(--bar-height);
   background-color: var(--bg-color);
-  transition: all 200ms ease;
+  transition: var(--ease-150);
 
   &::before,
   &::after {
@@ -37,13 +37,13 @@ const Bar = styled.span`
   }
 
   &::before {
-    transition: all 200ms ease;
+    transition: var(--ease-150);
     background-color: var(--bg-color);
     top: -0.6rem;
   }
 
   &::after {
-    transition: all 200ms ease;
+    transition: var(--ease-150);
     background-color: var(--bg-color);
     top: 0.6rem;
   }
@@ -56,7 +56,7 @@ const Wrapper = styled.button<HamburgerProps>`
   place-content: center;
   border-radius: 50%;
   overflow: hidden;
-  transition: all 200ms ease;
+  transition: var(--ease-150);
 
   @media (min-width: 768px) {
     display: none;

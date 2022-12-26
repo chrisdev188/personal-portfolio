@@ -22,11 +22,6 @@ const navlist = [
     name: "contact",
     path: "/contact",
   },
-  {
-    id: 4,
-    name: "blog",
-    path: "/blog",
-  },
 ];
 
 const MainNav = () => {
@@ -58,19 +53,20 @@ const Wrapper = styled.nav`
       padding: 0.5em 1em;
       background-color: #1f1f1f;
       color: lightgray;
-      border-radius: 0.5em;
+      font-weight: 500;
       text-transform: capitalize;
-      transition: all 200ms ease;
+      border-radius: 0.5em;
+      transition: var(--ease-150);
 
       &:hover,
       &:active {
-        background-color: lightblue;
-        color: black;
+        background-color: var(--accent);
+        color: var(--accent-contrast-text);
       }
 
       &.active {
-        background-color: lightpink;
-        color: black;
+        background-color: var(--primary);
+        color: var(--primary-contrast-text);
       }
     }
   }

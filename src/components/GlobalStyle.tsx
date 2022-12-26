@@ -10,8 +10,18 @@ const GlobalStyle = styled.createGlobalStyle`
     --page-width: 100rem;
     --header-height: 6rem;
 
+    /* colors */
+    --primary: #c488fc;
+    --primary-contrast-text: #000;
+    --accent: #a8d5e4;
+    --accent-contrast-text: #000;
+
     /* font values */
     --font-family: "Inter", sans-serif;
+
+    /* transitions */
+    --ease-150: all 150ms ease;
+    --ease-300: all 300ms ease;
   }
   * {
     margin: 0;
