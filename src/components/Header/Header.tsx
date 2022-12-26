@@ -4,6 +4,7 @@ import Container from "../Container";
 import Hamburger from "./Hamburger";
 import Logo from "./Logo";
 import MainNav from "./MainNav";
+import ModeButton from "./ModeButton";
 
 const Header = () => {
   const [menuShowing, setMenuShowing] = useState(false);
@@ -16,6 +17,7 @@ const Header = () => {
         <Logo />
         <MainNav />
         <Hamburger onClick={handleToggleMenu} menuShowing={menuShowing} />
+        <ModeButton />
       </Inner>
     </Wrapper>
   );

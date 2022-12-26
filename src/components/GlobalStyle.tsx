@@ -15,6 +15,7 @@ const GlobalStyle = styled.createGlobalStyle`
     --primary-contrast-text: #000;
     --accent: #a8d5e4;
     --accent-contrast-text: #000;
+    --element: #1f1f1f;
 
     /* font values */
     --font-family: "Inter", sans-serif;
