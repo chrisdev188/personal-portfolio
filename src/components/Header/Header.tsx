@@ -16,8 +16,10 @@ const Header = () => {
       <Inner>
         <Logo />
         <MainNav />
-        <Hamburger onClick={handleToggleMenu} menuShowing={menuShowing} />
-        <ModeButton />
+        <Actions>
+          <ModeButton />
+          <Hamburger onClick={handleToggleMenu} menuShowing={menuShowing} />
+        </Actions>
       </Inner>
     </Wrapper>
   );
@@ -40,6 +42,12 @@ const Inner = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`;
+
+const Actions = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 `;
 
 export default Header;

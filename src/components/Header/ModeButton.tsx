@@ -10,14 +10,18 @@ const ModeButton = () => {
 };
 
 const Wrapper = styled.button`
+  width: 3.5rem;
+  height: 3.5rem;
   color: white;
   font-size: 1.5rem;
-  width: 3rem;
-  height: 3rem;
-  display: grid;
-  place-content: center;
+  display: none;
   border-radius: 50%;
   transition: var(--ease-150);
+
+  @media (min-width: 768px) {
+    display: grid;
+    place-content: center;
+  }
 
   &:hover {
     background-color: var(--element);

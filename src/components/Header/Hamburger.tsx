@@ -14,7 +14,7 @@ const Hamburger: React.FC<HamburgerProps> = ({ onClick, menuShowing }) => {
 };
 
 const Bar = styled.span`
-  --bar-width: 1.75rem;
+  --bar-width: 1.5rem;
   --bar-height: 2px;
   --bg-color: white;
   --rounded: 8px;
