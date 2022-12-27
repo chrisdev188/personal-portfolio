@@ -1,5 +1,6 @@
 import React, { ComponentProps, ElementType } from "react";
 import styled, { css } from "styled-components";
+import { ProjectCard } from "../pages/Home/ProjectsSection";
 
 type PolymorphicProps<E extends ElementType, Props> = Props &
   Omit<ComponentProps<E>, "as"> & { as?: E };
@@ -76,6 +77,13 @@ const ButtonStyled = styled.button<CustomProps>`
       return textBtnStyles;
     }
   }}
+
+  ${ProjectCard} & {
+    padding: 0.75rem;
+    @media (min-width: 1200px) {
+      padding: 1rem;
+    }
+  }
 `;
 
 export default Button;

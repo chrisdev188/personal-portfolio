@@ -1,16 +1,18 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
 import { BsArrowRightCircle } from "react-icons/bs";
 import { FaPaperPlane } from "react-icons/fa";
-import Button from "../components/Button";
-import Container from "../components/Container";
-import Flex from "../components/Flex";
-import Grid from "../components/Grid";
-import Text from "../components/Text";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import Button from "../../components/Button";
+import Container from "../../components/Container";
+import Flex from "../../components/Flex";
+import Grid from "../../components/Grid";
+import Text from "../../components/Text";
 
-const Home = () => {
+interface IHeroSectionProps {}
+
+const HeroSection: React.FunctionComponent<IHeroSectionProps> = (props) => {
   return (
-    <Hero className="hero">
+    <Hero>
       <Inner>
         <Grid>
           <TextContent>
@@ -121,4 +123,4 @@ const Image = styled.div`
   }
 `;
 
-export default Home;
+export default HeroSection;

@@ -7,7 +7,7 @@ const styled = { createGlobalStyle };
 
 const GlobalStyle = styled.createGlobalStyle`
   :root {
-    --page-width: 100rem;
+    --page-width: 95rem;
     --header-height: 6rem;
     --rounded-lg: 1rem;
     --rounded-md: 0.5rem;
@@ -18,7 +18,7 @@ const GlobalStyle = styled.createGlobalStyle`
     --primary-contrast-text: #000;
     --accent: #a8d5e4;
     --accent-contrast-text: #000;
-    --element: #1f1f1f;
+    --element: #202020;
 
     /* font values */
     --font-family: "Inter", sans-serif;
@@ -34,7 +34,7 @@ const GlobalStyle = styled.createGlobalStyle`
   }
   body {
     font-family: var(--font-family);
-    background-color: #050505;
+    background-color: #101010;
   }
   ul {
     list-style-type: none;
@@ -47,6 +47,7 @@ const GlobalStyle = styled.createGlobalStyle`
   img {
     max-width: 100%;
     height: auto;
+    display: block;
   }
   button {
     background-color: transparent;
