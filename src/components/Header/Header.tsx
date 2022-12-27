@@ -27,7 +27,6 @@ const Header = () => {
 
 const Wrapper = styled.header`
   height: var(--header-height);
-  background-color: black;
   color: rgb(255, 255, 255);
   display: flex;
   align-items: center;

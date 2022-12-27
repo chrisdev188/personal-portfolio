@@ -9,6 +9,9 @@ const GlobalStyle = styled.createGlobalStyle`
   :root {
     --page-width: 100rem;
     --header-height: 6rem;
+    --rounded-lg: 1rem;
+    --rounded-md: 0.5rem;
+    --rounded-sm: 4px;
 
     /* colors */
     --primary: #c488fc;
@@ -31,6 +34,7 @@ const GlobalStyle = styled.createGlobalStyle`
   }
   body {
     font-family: var(--font-family);
+    background-color: #050505;
   }
   ul {
     list-style-type: none;
@@ -49,6 +53,15 @@ const GlobalStyle = styled.createGlobalStyle`
     border: none;
     font: inherit;
     cursor: pointer;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-transform: capitalize;
+    font-weight: 700;
   }
 `;
 
