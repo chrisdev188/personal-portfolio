@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Button from "../../components/Button";
 import Container from "../../components/Container";
 import Grid from "../../components/Grid";
@@ -17,6 +19,32 @@ const ContactSection: React.FC<IContactSectionProps> = (props) => {
     e.preventDefault();
     if (!form.current) return;
 
+    const notify = (type: "success" | "error") => {
+      if (type === "success") {
+        toast.success("Message sent successfully!", {
+          position: "bottom-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      } else {
+        toast.error("There is something wrong!", {
+          position: "bottom-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      }
+    };
+
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -26,10 +54,12 @@ const ContactSection: React.FC<IContactSectionProps> = (props) => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          notify("success");
           form.current?.reset();
+          console.log(result.text);
         },
         (error) => {
+          notify("error");
           console.log(error.text);
         }
       );
@@ -81,6 +111,18 @@ const ContactSection: React.FC<IContactSectionProps> = (props) => {
           </FormImage>
         </Grid>
       </Container>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </Section>
   );
 };
