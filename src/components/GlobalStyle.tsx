@@ -64,6 +64,13 @@ const GlobalStyle = styled.createGlobalStyle`
     text-transform: capitalize;
     font-weight: 700;
   }
+  input,
+  textarea,
+  label {
+    display: block;
+    width: 100%;
+    font: inherit;
+  }
 `;
 
 export default GlobalStyle;

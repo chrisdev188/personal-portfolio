@@ -111,9 +111,7 @@ const ProjectList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 7rem;
-  margin-top: 5rem;
   @media (min-width: 1200px) {
-    margin-top: 10rem;
     gap: 10rem;
   }
 `;

@@ -8,6 +8,10 @@ interface ContentTextProps {
 const HeadingWithBackgroundText = styled(Text)<ContentTextProps>`
   position: relative;
   text-align: center;
+  margin-bottom: 5rem;
+  @media (min-width: 768px) {
+    margin-bottom: 7rem;
+  }
   &::before {
     content: "${(props) => props.behideText}";
     font-size: clamp(10rem, 15vw, 12.5rem);
