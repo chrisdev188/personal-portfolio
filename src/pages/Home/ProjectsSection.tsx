@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { TbArrowRight } from "react-icons/tb";
 import Button from "../../components/Button";
 import Container from "../../components/Container";
 import Flex from "../../components/Flex";
@@ -88,9 +89,12 @@ const ProjectsSection = () => {
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Ut ullam animi saepe libero corrupti quaerat!
                     </Text>
-                    <Flex wrap="wrap" gap={0.5}>
+                    <Flex wrap="wrap" style={{ paddingTop: "1rem" }}>
                       <Button>live preview</Button>
-                      <Button variant="text">checkout code</Button>
+                      <Button variant="text">
+                        <span>checkout code</span>
+                        <TbArrowRight />
+                      </Button>
                     </Flex>
                   </ProjectCardBody>
                 </ProjectCard>
@@ -107,7 +111,7 @@ const ProjectList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 7rem;
-  margin-top: 7rem;
+  margin-top: 5rem;
   @media (min-width: 1200px) {
     margin-top: 10rem;
     gap: 10rem;
@@ -170,9 +174,13 @@ const ProjectCardImage = styled.div`
   }
 `;
 const ProjectCardBody = styled.div<ProjectCardProps>`
-  padding: 3rem;
+  padding: 2rem 0rem;
   & > * + * {
     margin-top: 1.5rem;
+  }
+  @media (min-width: 560px) {
+    grid-column: span 6;
+    padding: 3rem;
   }
   @media (min-width: 768px) {
     grid-column: span 6;

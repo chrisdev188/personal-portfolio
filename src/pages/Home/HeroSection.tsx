@@ -1,4 +1,4 @@
-import { BsArrowRightCircle } from "react-icons/bs";
+import { TbArrowRight } from "react-icons/tb";
 import { FaPaperPlane } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -31,7 +31,7 @@ const HeroSection: React.FunctionComponent<IHeroSectionProps> = (props) => {
               </Button>
               <Button variant="text">
                 <span>more about me</span>
-                <BsArrowRightCircle />
+                <TbArrowRight />
               </Button>
             </Flex>
           </TextContent>
