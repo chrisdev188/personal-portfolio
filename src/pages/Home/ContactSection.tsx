@@ -15,35 +15,35 @@ interface FormProps extends FormHTMLAttributes<HTMLFormElement> {}
 const ContactSection: React.FC<IContactSectionProps> = (props) => {
   const form = useRef<HTMLFormElement>(null);
 
+  const notify = (type: "success" | "error") => {
+    if (type === "success") {
+      toast.success("Message sent successfully!", {
+        position: "bottom-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    } else {
+      toast.error("There is something wrong!", {
+        position: "bottom-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  };
+
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!form.current) return;
-
-    const notify = (type: "success" | "error") => {
-      if (type === "success") {
-        toast.success("Message sent successfully!", {
-          position: "bottom-center",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-      } else {
-        toast.error("There is something wrong!", {
-          position: "bottom-center",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-      }
-    };
 
     emailjs
       .sendForm(
