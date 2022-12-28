@@ -1,13 +1,39 @@
 import styled from "styled-components";
+import emailjs from "@emailjs/browser";
 import Button from "../../components/Button";
 import Container from "../../components/Container";
 import Grid from "../../components/Grid";
 import HeadingWithBackgroundText from "../../components/HeadingWithBackgroundText";
 import Section from "../../components/Section";
+import { FormHTMLAttributes, useRef } from "react";
 
 interface IContactSectionProps {}
+interface FormProps extends FormHTMLAttributes<HTMLFormElement> {}
 
 const ContactSection: React.FC<IContactSectionProps> = (props) => {
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          form.current?.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <Section>
       <Container>
@@ -15,13 +41,14 @@ const ContactSection: React.FC<IContactSectionProps> = (props) => {
           Let's work together
         </HeadingWithBackgroundText>
         <Grid>
-          <Form>
+          <Form onSubmit={sendEmail} ref={form}>
             <FormInput>
               <label htmlFor="name">Your name</label>
               <input
                 type="text"
                 id="name"
                 placeholder="Enter your name..."
+                name="user_name"
                 required
               />
             </FormInput>
@@ -31,6 +58,7 @@ const ContactSection: React.FC<IContactSectionProps> = (props) => {
                 type="email"
                 id="email"
                 placeholder="Enter your email..."
+                name="user_email"
                 required
               />
             </FormInput>
@@ -39,6 +67,7 @@ const ContactSection: React.FC<IContactSectionProps> = (props) => {
               <textarea
                 placeholder="Enter your message..."
                 id="message"
+                name="message"
                 required
               />
             </FormInput>
@@ -56,7 +85,7 @@ const ContactSection: React.FC<IContactSectionProps> = (props) => {
   );
 };
 
-const Form = styled.form`
+const Form = styled.form<FormProps>`
   & > * + * {
     margin-top: 2rem;
   }
