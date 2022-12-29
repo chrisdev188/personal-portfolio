@@ -23,7 +23,7 @@ const projects = [
     id: 2,
     name: "Movies IMDB",
     description: "lorem text description",
-    category: "website",
+    category: "fullstack website",
     live: "live url",
     code: "code url",
     techstacks: ["HTML", "CSS", "React", "Typescript", "TailwindCSS"],

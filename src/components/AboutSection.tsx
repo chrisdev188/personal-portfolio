@@ -66,9 +66,8 @@ const AboutSection: React.FunctionComponent<IAboutSectionProps> = (props) => {
                 What I do in my free time
               </Text>
               <Text variant="body" as="p">
-                When I’m not coding, I’m probably playing video games, playing
-                soccer with friends, cycling around the city, reading books and
-                enjoying foods.
+                When I’m not coding, I'm probably watching movies, playing
+                soccer, cycling around the city, or reading books.
               </Text>
             </div>
             <AboutActions wrap="wrap">
