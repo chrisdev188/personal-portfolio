@@ -68,12 +68,14 @@ const ContactSection: React.FC<IContactSectionProps> = (props) => {
     <Section>
       <Container>
         <HeadingWithBackgroundText variant="h2" as="h2" behideText="Work">
-          Let's work together
+          Let's build something awesome
         </HeadingWithBackgroundText>
         <Grid>
           <Form onSubmit={sendEmail} ref={form}>
             <FormInput>
-              <label htmlFor="name">Your name</label>
+              <label htmlFor="name" className="sr-only">
+                Your name
+              </label>
               <input
                 type="text"
                 id="name"
@@ -83,7 +85,9 @@ const ContactSection: React.FC<IContactSectionProps> = (props) => {
               />
             </FormInput>
             <FormInput>
-              <label htmlFor="email">Your email</label>
+              <label htmlFor="email" className="sr-only">
+                Your email
+              </label>
               <input
                 type="email"
                 id="email"
@@ -93,7 +97,9 @@ const ContactSection: React.FC<IContactSectionProps> = (props) => {
               />
             </FormInput>
             <FormInput>
-              <label htmlFor="message">Your message</label>
+              <label htmlFor="message" className="sr-only">
+                Your message
+              </label>
               <textarea
                 placeholder="Enter your message..."
                 id="message"
@@ -137,13 +143,9 @@ const Form = styled.form<FormProps>`
 `;
 
 const FormInput = styled.div`
-  label {
-    color: white;
-    margin-bottom: 0.75rem;
-  }
   input,
   textarea {
-    padding: 1.25rem 2rem;
+    padding: 1.5rem 2rem;
     background-color: var(--element);
     border: none;
     color: white;
@@ -153,7 +155,7 @@ const FormInput = styled.div`
     }
   }
   textarea {
-    min-height: 10rem;
+    min-height: 12rem;
     width: 100%;
     resize: none;
   }

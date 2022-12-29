@@ -1,6 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
+import Button from "../../components/Button";
 import Container from "../../components/Container";
+import Flex from "../../components/Flex";
 import Grid from "../../components/Grid";
 import HeadingWithBackgroundText from "../../components/HeadingWithBackgroundText";
 import Section from "../../components/Section";
@@ -13,7 +15,7 @@ const AboutSection: React.FunctionComponent<IAboutSectionProps> = (props) => {
     <Section>
       <Container>
         <HeadingWithBackgroundText variant="h2" as="h2" behideText="About">
-          About me
+          A little bit about me
         </HeadingWithBackgroundText>
         <Grid>
           <AboutText>
@@ -69,6 +71,10 @@ const AboutSection: React.FunctionComponent<IAboutSectionProps> = (props) => {
                 enjoying foods.
               </Text>
             </div>
+            <AboutActions wrap="wrap">
+              <Button>View All Projects</Button>
+              <Button variant="outlined">Download Resume</Button>
+            </AboutActions>
           </AboutText>
           <AboutImage>
             <img src="./portrait.jpg" alt="Chris" />
@@ -80,19 +86,17 @@ const AboutSection: React.FunctionComponent<IAboutSectionProps> = (props) => {
 };
 
 const AboutText = styled.div`
-  text-align: center;
+  max-width: 40rem;
+  margin: auto;
   & > * + * {
     margin-top: 2.5rem;
   }
   @media (min-width: 768px) {
     grid-column: span 12;
-    max-width: 50rem;
-    margin: auto;
   }
   @media (min-width: 1200px) {
     grid-column: span 6;
     max-width: unset;
-    text-align: left;
     padding-right: 5rem;
   }
 `;
@@ -101,7 +105,7 @@ const AboutImage = styled.div`
   overflow: hidden;
   order: -1;
   margin-bottom: 3rem;
-  max-width: 30rem;
+  max-width: 40rem;
   margin: auto;
   margin-bottom: 3rem;
   @media (min-width: 768px) {
@@ -112,7 +116,6 @@ const AboutImage = styled.div`
 
   @media (min-width: 1200px) {
     grid-column: span 6;
-    max-width: unset;
     margin-bottom: 0;
     order: 1;
   }
@@ -122,9 +125,15 @@ const CurrentTechs = styled.ul`
   flex-direction: column;
   color: #a5a5a5;
   gap: 1rem;
-  @media (min-width: 1200px) {
-    list-style-type: disc;
-    padding-left: 1.2rem;
+  list-style-type: disc;
+  padding-left: 1.2rem;
+`;
+
+const AboutActions = styled(Flex)`
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: start;
   }
 `;
 

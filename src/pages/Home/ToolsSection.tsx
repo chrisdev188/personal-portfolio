@@ -26,7 +26,7 @@ const ToolsSection: React.FunctionComponent<IToolsSectionProps> = (props) => {
     <Section>
       <ToolsContent>
         <HeadingWithBackgroundText variant="h2" as="h2" behideText="Tools">
-          Frontend Development Tools
+          Development Tools
         </HeadingWithBackgroundText>
         <ToolList>
           {tools.map((tool) => (

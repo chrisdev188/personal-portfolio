@@ -45,7 +45,7 @@ const Text = styled.div<TextProps>`
         }
 
         @media (min-width: 1440px) {
-          font-size: 3.33rem;
+          font-size: 3.5rem;
         }
       `;
     }
@@ -75,11 +75,11 @@ const Text = styled.div<TextProps>`
         text-transform: capitalize;
 
         @media (min-width: 768px) {
-          font-size: 1.8rem;
+          font-size: 1.5rem;
         }
 
         @media (min-width: 1440px) {
-          font-size: 2.3rem;
+          font-size: 1.8rem;
         }
       `;
     }
