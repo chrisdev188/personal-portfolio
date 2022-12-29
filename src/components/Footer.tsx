@@ -23,12 +23,22 @@ const StyledFooter = styled.footer`
 `;
 const FooterInner = styled(Container)`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  line-height: 1.65;
+  @media (min-width: 768px) {
+    justify-content: space-between;
+    text-align: left;
+  }
 `;
 const Signature = styled.img`
   width: 7rem;
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
 `;
 
 export default Footer;

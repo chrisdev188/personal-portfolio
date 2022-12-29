@@ -21,6 +21,7 @@ const Text = styled.div<TextProps>`
       return css`
         font-weight: 700;
         font-size: 2.5rem;
+        line-height: 1.2;
         color: white;
 
         @media (min-width: 768px) {
@@ -34,12 +35,13 @@ const Text = styled.div<TextProps>`
     if (props.variant === "h2") {
       return css`
         font-weight: 600;
-        font-size: 2rem;
+        font-size: 2.2rem;
+        line-height: 1.3;
         color: white;
         text-transform: capitalize;
 
         @media (min-width: 768px) {
-          font-size: 2.5rem;
+          font-size: 2.6rem;
         }
 
         @media (min-width: 1440px) {
@@ -50,7 +52,8 @@ const Text = styled.div<TextProps>`
     if (props.variant === "h3") {
       return css`
         font-weight: 600;
-        font-size: 1.8rem;
+        font-size: 1.7rem;
+        line-height: 1.4;
         color: white;
         text-transform: capitalize;
 
@@ -60,6 +63,23 @@ const Text = styled.div<TextProps>`
 
         @media (min-width: 1440px) {
           font-size: 2.8rem;
+        }
+      `;
+    }
+    if (props.variant === "h4") {
+      return css`
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 1.5;
+        color: white;
+        text-transform: capitalize;
+
+        @media (min-width: 768px) {
+          font-size: 1.8rem;
+        }
+
+        @media (min-width: 1440px) {
+          font-size: 2.3rem;
         }
       `;
     }

@@ -1,4 +1,5 @@
 import Divider from "../../components/Divider";
+import AboutSection from "./AboutSection";
 import ContactSection from "./ContactSection";
 import HeroSection from "./HeroSection";
 import ProjectsSection from "./ProjectsSection";
@@ -12,6 +13,8 @@ const Home = () => {
       <ProjectsSection />
       <Divider />
       <ToolsSection />
+      <Divider />
+      <AboutSection />
       <Divider />
       <ContactSection />
     </main>
