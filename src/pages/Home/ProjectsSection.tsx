@@ -89,13 +89,13 @@ const ProjectsSection = () => {
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Ut ullam animi saepe libero corrupti quaerat!
                     </Text>
-                    <Flex wrap="wrap" style={{ paddingTop: "1rem" }}>
+                    <ProjectActions wrap="wrap">
                       <Button>live preview</Button>
                       <Button variant="text">
                         <span>checkout code</span>
                         <TbArrowRight />
                       </Button>
-                    </Flex>
+                    </ProjectActions>
                   </ProjectCardBody>
                 </ProjectCard>
               </li>
@@ -184,6 +184,13 @@ const ProjectCardBody = styled.div<ProjectCardProps>`
   }
   @media (min-width: 1200px) {
     padding: 2rem 5rem;
+  }
+`;
+
+const ProjectActions = styled(Flex)`
+  padding-top: 1rem;
+  @media (min-width: 768px) {
+    justify-content: start;
   }
 `;
 

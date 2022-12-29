@@ -79,9 +79,13 @@ const ButtonStyled = styled.button<CustomProps>`
   }}
 
   ${ProjectCard} & {
-    padding: 0.75rem;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 4px;
     @media (min-width: 1200px) {
+      font-size: 1.125rem;
       padding: 1rem;
+      border-radius: 8px;
     }
   }
 `;

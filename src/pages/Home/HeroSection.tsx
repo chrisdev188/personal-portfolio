@@ -89,7 +89,7 @@ const Image = styled.div`
   position: relative;
 
   img {
-    max-height: 60vmin;
+    max-height: 70vmin;
   }
 
   @media (min-width: 768px) {
