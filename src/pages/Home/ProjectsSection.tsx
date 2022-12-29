@@ -127,12 +127,10 @@ export const ProjectCard = styled(Grid)<ProjectCardProps>`
   }
   &::before {
     content: "";
-    width: 100%;
-    height: 5px;
+    width: 0;
+    height: 0;
     background-color: var(--primary);
     position: absolute;
-    bottom: 0;
-    left: 0;
     @media (min-width: 768px) {
       width: 5px;
       height: 100%;
