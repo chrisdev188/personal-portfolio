@@ -4,7 +4,7 @@ import Container from "../Container";
 import Hamburger from "./Hamburger";
 import Logo from "./Logo";
 import MainNav from "./MainNav";
-import ModeButton from "./ModeButton";
+// import ModeButton from "./ModeButton";
 
 const Header = () => {
   const [menuShowing, setMenuShowing] = useState(false);
@@ -16,10 +16,7 @@ const Header = () => {
       <Inner>
         <Logo />
         <MainNav />
-        <Actions>
-          <ModeButton />
-          <Hamburger onClick={handleToggleMenu} menuShowing={menuShowing} />
-        </Actions>
+        <Hamburger onClick={handleToggleMenu} menuShowing={menuShowing} />
       </Inner>
     </Wrapper>
   );
@@ -41,12 +38,6 @@ const Inner = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`;
-
-const Actions = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 `;
 
 export default Header;
