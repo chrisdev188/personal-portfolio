@@ -14,11 +14,11 @@ const GlobalStyle = styled.createGlobalStyle`
     --rounded-sm: 4px;
 
     /* colors */
-    --primary: #c488fc;
-    --primary-contrast-text: #000;
+    --primary: #8427f5;
+    --primary-contrast-text: #fff;
     --accent: #a8d5e4;
     --accent-contrast-text: #000;
-    --element: #202020;
+    --element: #17181e;
 
     /* font values */
     --font-family: "Inter", sans-serif;
@@ -34,7 +34,7 @@ const GlobalStyle = styled.createGlobalStyle`
   }
   body {
     font-family: var(--font-family);
-    background-color: #101010;
+    background-color: #000000;
   }
   ul {
     list-style-type: none;

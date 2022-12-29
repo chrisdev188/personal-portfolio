@@ -54,7 +54,7 @@ const textBtnStyles = css`
 `;
 
 const ButtonStyled = styled.button<CustomProps>`
-  border-radius: var(--rounded-lg);
+  border-radius: var(--rounded-md);
   padding: 1rem;
   text-transform: capitalize;
   font-weight: 500;
