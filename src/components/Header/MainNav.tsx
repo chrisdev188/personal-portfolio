@@ -51,7 +51,6 @@ const Wrapper = styled.nav`
 
     a {
       padding: 0.5em 1em;
-      background-color: var(element);
       background-color: var(--element);
       color: lightgray;
       font-weight: 500;

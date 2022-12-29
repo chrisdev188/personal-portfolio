@@ -67,8 +67,8 @@ const ProjectsSection = () => {
   return (
     <Section>
       <Container>
-        <HeadingWithBackgroundText variant="h2" as="h2" behideText="Featured">
-          Featured projects
+        <HeadingWithBackgroundText variant="h2" as="h2" behideText="projects">
+          Selected projects
         </HeadingWithBackgroundText>
         <ProjectList>
           {featuredProjects.map((project, index) => {

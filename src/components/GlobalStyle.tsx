@@ -16,7 +16,7 @@ const GlobalStyle = styled.createGlobalStyle`
     /* colors */
     --primary: #8427f5;
     --primary-contrast-text: #fff;
-    --accent: #a8d5e4;
+    --accent: #eda2d6;
     --accent-contrast-text: #000;
     --element: #17181e;
 

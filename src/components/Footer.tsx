@@ -15,7 +15,7 @@ const Footer: React.FC<IFooterProps> = (props) => {
 };
 
 const StyledFooter = styled.footer`
-  background-color: #202020;
+  background-color: var(--element);
   small {
     font-size: 0.875rem;
     color: #a1a1a1;
