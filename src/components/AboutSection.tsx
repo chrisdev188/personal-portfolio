@@ -1,18 +1,18 @@
 import * as React from "react";
 import styled from "styled-components";
-import Button from "../../components/Button";
-import Container from "../../components/Container";
-import Flex from "../../components/Flex";
-import Grid from "../../components/Grid";
-import HeadingWithBackgroundText from "../../components/HeadingWithBackgroundText";
-import Section from "../../components/Section";
-import Text from "../../components/Text";
+import Button from "./Button";
+import Container from "./Container";
+import Flex from "./Flex";
+import Grid from "./Grid";
+import HeadingWithBackgroundText from "./HeadingWithBackgroundText";
+import Section from "./Section";
+import Text from "./Text";
 
 interface IAboutSectionProps {}
 
 const AboutSection: React.FunctionComponent<IAboutSectionProps> = (props) => {
   return (
-    <Section>
+    <Section id="about">
       <Container>
         <HeadingWithBackgroundText variant="h2" as="h2" behideText="About">
           A little bit about me
@@ -101,13 +101,14 @@ const AboutText = styled.div`
   }
 `;
 const AboutImage = styled.div`
-  border-radius: 8px;
-  overflow: hidden;
   order: -1;
   margin-bottom: 3rem;
   max-width: 40rem;
   margin: auto;
   margin-bottom: 3rem;
+  img {
+    border-radius: 8px;
+  }
   @media (min-width: 768px) {
     grid-column: span 12;
     justify-self: center;
@@ -118,6 +119,9 @@ const AboutImage = styled.div`
     grid-column: span 6;
     margin-bottom: 0;
     order: 1;
+    height: 100%;
+    display: grid;
+    place-items: center;
   }
 `;
 const CurrentTechs = styled.ul`

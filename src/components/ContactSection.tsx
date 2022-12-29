@@ -2,11 +2,11 @@ import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Button from "../../components/Button";
-import Container from "../../components/Container";
-import Grid from "../../components/Grid";
-import HeadingWithBackgroundText from "../../components/HeadingWithBackgroundText";
-import Section from "../../components/Section";
+import Button from "./Button";
+import Container from "./Container";
+import Grid from "./Grid";
+import HeadingWithBackgroundText from "./HeadingWithBackgroundText";
+import Section from "./Section";
 import { FormHTMLAttributes, useRef } from "react";
 
 interface IContactSectionProps {}
@@ -65,9 +65,9 @@ const ContactSection: React.FC<IContactSectionProps> = (props) => {
       );
   };
   return (
-    <Section>
+    <Section id="contact">
       <Container>
-        <HeadingWithBackgroundText variant="h2" as="h2" behideText="Work">
+        <HeadingWithBackgroundText variant="h2" as="h2" behideText="collab">
           Let's build something awesome
         </HeadingWithBackgroundText>
         <Grid>

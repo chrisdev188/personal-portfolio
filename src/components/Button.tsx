@@ -1,6 +1,6 @@
 import React, { ComponentProps, ElementType } from "react";
 import styled, { css } from "styled-components";
-import { ProjectCard } from "../pages/Home/ProjectsSection";
+import { ProjectCard } from "./Projects";
 
 type PolymorphicProps<E extends ElementType, Props> = Props &
   Omit<ComponentProps<E>, "as"> & { as?: E };

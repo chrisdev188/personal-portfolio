@@ -12,17 +12,17 @@ const Header = () => {
     setMenuShowing((prevValue) => !prevValue);
   };
   return (
-    <Wrapper>
+    <StyledHeader>
       <Inner>
         <Logo />
         <MainNav />
         <Hamburger onClick={handleToggleMenu} menuShowing={menuShowing} />
       </Inner>
-    </Wrapper>
+    </StyledHeader>
   );
 };
 
-const Wrapper = styled.header`
+const StyledHeader = styled.header`
   height: var(--header-height);
   color: rgb(255, 255, 255);
   display: flex;

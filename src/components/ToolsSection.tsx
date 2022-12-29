@@ -1,8 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
-import Container from "../../components/Container";
-import HeadingWithBackgroundText from "../../components/HeadingWithBackgroundText";
-import Section from "../../components/Section";
+import Container from "./Container";
+import HeadingWithBackgroundText from "./HeadingWithBackgroundText";
+import Section from "./Section";
 
 interface IToolsSectionProps {}
 
@@ -23,7 +23,7 @@ const tools = [
 
 const ToolsSection: React.FunctionComponent<IToolsSectionProps> = (props) => {
   return (
-    <Section>
+    <Section id="tools">
       <ToolsContent>
         <HeadingWithBackgroundText variant="h2" as="h2" behideText="Tools">
           Development Tools

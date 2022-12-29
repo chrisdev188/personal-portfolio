@@ -1,44 +1,42 @@
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 const navlist = [
   {
     id: 0,
     name: "home",
-    path: "/",
   },
   {
     id: 1,
-    name: "portfolio",
-    path: "/portfolio",
+    name: "projects",
   },
   {
     id: 2,
     name: "about",
-    path: "/about",
   },
   {
     id: 3,
     name: "contact",
-    path: "/contact",
   },
 ];
 
 const MainNav = () => {
   return (
-    <Wrapper>
+    <StyledNav>
       <ul>
-        {navlist.map(({ id, path, name }) => (
+        {navlist.map(({ id, name }) => (
           <li key={id}>
-            <NavLink to={path}>{name}</NavLink>
+            <Link to={name} spy={true} smooth={true} activeClass="active">
+              {name}
+            </Link>
           </li>
         ))}
       </ul>
-    </Wrapper>
+    </StyledNav>
   );
 };
 
-const Wrapper = styled.nav`
+const StyledNav = styled.nav`
   display: none;
 
   @media (min-width: 768px) {
@@ -57,6 +55,7 @@ const Wrapper = styled.nav`
       text-transform: capitalize;
       border-radius: 0.5em;
       transition: var(--ease-150);
+      cursor: pointer;
 
       &:hover,
       &:active {

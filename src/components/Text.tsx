@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { ProjectCard } from "../pages/Home/ProjectsSection";
+import { ProjectCard } from "./Projects";
 
 interface TextProps {
   as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "small";

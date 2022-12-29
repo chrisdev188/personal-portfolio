@@ -1,16 +1,16 @@
-import Divider from "../../components/Divider";
+import Divider from "./Divider";
 import AboutSection from "./AboutSection";
 import ContactSection from "./ContactSection";
 import HeroSection from "./HeroSection";
-import ProjectsSection from "./ProjectsSection";
+import FeaturedProjects from "./Projects";
 import ToolsSection from "./ToolsSection";
 
-const Home = () => {
+const Main = () => {
   return (
     <main>
       <HeroSection />
       <Divider />
-      <ProjectsSection />
+      <FeaturedProjects />
       <Divider />
       <ToolsSection />
       <Divider />
@@ -21,4 +21,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Main;

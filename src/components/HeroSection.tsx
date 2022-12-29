@@ -1,18 +1,17 @@
 import { TbArrowRight } from "react-icons/tb";
 import { FaPaperPlane } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Button from "../../components/Button";
-import Container from "../../components/Container";
-import Flex from "../../components/Flex";
-import Grid from "../../components/Grid";
-import Text from "../../components/Text";
+import Button from "./Button";
+import Container from "./Container";
+import Flex from "./Flex";
+import Grid from "./Grid";
+import Text from "./Text";
 
 interface IHeroSectionProps {}
 
 const HeroSection: React.FunctionComponent<IHeroSectionProps> = (props) => {
   return (
-    <Hero>
+    <Hero id="home">
       <Inner>
         <Grid>
           <TextContent>
@@ -25,7 +24,7 @@ const HeroSection: React.FunctionComponent<IHeroSectionProps> = (props) => {
               with the power of code.
             </Text>
             <Flex style={{ paddingTop: "1rem" }} wrap="wrap">
-              <Button as={Link} to="/portfolio">
+              <Button as="a" href="/portfolio">
                 <span>view my work</span>
                 <FaPaperPlane />
               </Button>

@@ -1,15 +1,14 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Logo = () => {
   return (
-    <LinkStyled to="/">
+    <LinkStyled href="#">
       <img src="./logo.svg" alt="Chris Bui" />
     </LinkStyled>
   );
 };
 
-const LinkStyled = styled(Link)`
+const LinkStyled = styled.a`
   width: 7rem;
   display: grid;
   place-content: center;

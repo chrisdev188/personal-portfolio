@@ -1,14 +1,14 @@
 import styled, { css } from "styled-components";
 import { TbArrowRight } from "react-icons/tb";
-import Button from "../../components/Button";
-import Container from "../../components/Container";
-import Flex from "../../components/Flex";
-import Grid from "../../components/Grid";
-import HeadingWithBackgroundText from "../../components/HeadingWithBackgroundText";
-import Section from "../../components/Section";
-import Text from "../../components/Text";
+import Button from "./Button";
+import Container from "./Container";
+import Flex from "./Flex";
+import Grid from "./Grid";
+import HeadingWithBackgroundText from "./HeadingWithBackgroundText";
+import Section from "./Section";
+import Text from "./Text";
 
-const mockProjects = [
+const projects = [
   {
     id: 1,
     name: "Audiophile",
@@ -18,7 +18,6 @@ const mockProjects = [
     code: "code url",
     techstacks: ["HTML", "CSS", "React", "Typescript", "Styled-components"],
     img: "https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1562&q=80",
-    featured: true,
   },
   {
     id: 2,
@@ -29,7 +28,6 @@ const mockProjects = [
     code: "code url",
     techstacks: ["HTML", "CSS", "React", "Typescript", "TailwindCSS"],
     img: "https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1562&q=80",
-    featured: true,
   },
   {
     id: 3,
@@ -40,7 +38,6 @@ const mockProjects = [
     code: "code url",
     techstacks: ["HTML", "CSS", "React", "Typescript"],
     img: "https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1562&q=80",
-    featured: false,
   },
   {
     id: 4,
@@ -51,7 +48,6 @@ const mockProjects = [
     code: "code url",
     techstacks: ["HTML", "CSS", "React", "Typescript"],
     img: "https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1562&q=80",
-    featured: false,
   },
 ];
 
@@ -59,19 +55,15 @@ interface ProjectCardProps {
   odd?: boolean;
 }
 
-const ProjectsSection = () => {
-  const featuredProjects = mockProjects.filter(
-    (project) => project.featured === true
-  );
-
+const Projects = () => {
   return (
-    <Section>
+    <Section id="projects">
       <Container>
-        <HeadingWithBackgroundText variant="h2" as="h2" behideText="Featured">
-          Featured projects
+        <HeadingWithBackgroundText variant="h2" as="h2" behideText="Projects">
+          Selected Projects
         </HeadingWithBackgroundText>
         <ProjectList>
-          {featuredProjects.map((project, index) => {
+          {projects.map((project, index) => {
             return (
               <li key={project.id}>
                 <ProjectCard odd={index % 2 === 1}>
@@ -194,4 +186,4 @@ const ProjectActions = styled(Flex)`
   }
 `;
 
-export default ProjectsSection;
+export default Projects;
