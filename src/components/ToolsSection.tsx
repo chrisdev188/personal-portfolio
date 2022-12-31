@@ -4,8 +4,6 @@ import Container from "./Container";
 import HeadingWithBackgroundText from "./HeadingWithBackgroundText";
 import Section from "./Section";
 
-interface IToolsSectionProps {}
-
 const tools = [
   { id: 1, name: "HTML", url: "./html-icon.svg" },
   { id: 2, name: "CSS", url: "./css-icon.svg" },
@@ -21,7 +19,7 @@ const tools = [
   { id: 12, name: "Illustrator", url: "./ai-icon.svg" },
 ];
 
-const ToolsSection: React.FunctionComponent<IToolsSectionProps> = (props) => {
+const ToolsSection = () => {
   return (
     <Section id="tools">
       <ToolsContent>

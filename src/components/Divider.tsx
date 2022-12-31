@@ -1,9 +1,6 @@
-import * as React from "react";
 import styled from "styled-components";
 
-interface IDividerProps {}
-
-const Divider: React.FunctionComponent<IDividerProps> = (props) => {
+const Divider = () => {
   return <DividerStyled as="hr" />;
 };
 

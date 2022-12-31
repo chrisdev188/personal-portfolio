@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-interface GridProps {}
-
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr;

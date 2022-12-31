@@ -8,9 +8,7 @@ import Flex from "./Flex";
 import Grid from "./Grid";
 import Text from "./Text";
 
-interface IHeroSectionProps {}
-
-const HeroSection: React.FunctionComponent<IHeroSectionProps> = (props) => {
+const HeroSection = () => {
   return (
     <Hero id="home">
       <Inner>

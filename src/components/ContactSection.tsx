@@ -9,10 +9,9 @@ import HeadingWithBackgroundText from "./HeadingWithBackgroundText";
 import Section from "./Section";
 import { FormHTMLAttributes, useRef } from "react";
 
-interface IContactSectionProps {}
 interface FormProps extends FormHTMLAttributes<HTMLFormElement> {}
 
-const ContactSection: React.FC<IContactSectionProps> = (props) => {
+const ContactSection = () => {
   const form = useRef<HTMLFormElement>(null);
 
   const notify = (type: "success" | "error") => {

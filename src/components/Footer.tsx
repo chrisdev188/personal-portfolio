@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import Container from "./Container";
 
-interface IFooterProps {}
-
-const Footer: React.FC<IFooterProps> = (props) => {
+const Footer = () => {
   return (
     <StyledFooter>
       <FooterInner>

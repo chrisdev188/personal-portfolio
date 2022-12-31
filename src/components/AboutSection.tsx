@@ -1,4 +1,3 @@
-import * as React from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import Container from "./Container";
@@ -8,9 +7,7 @@ import HeadingWithBackgroundText from "./HeadingWithBackgroundText";
 import Section from "./Section";
 import Text from "./Text";
 
-interface IAboutSectionProps {}
-
-const AboutSection: React.FunctionComponent<IAboutSectionProps> = (props) => {
+const AboutSection = () => {
   return (
     <Section id="about">
       <Container>
@@ -113,7 +110,6 @@ const AboutImage = styled.div`
     justify-self: center;
     margin-bottom: 5rem;
   }
-
   @media (min-width: 1200px) {
     grid-column: span 6;
     margin-bottom: 0;
