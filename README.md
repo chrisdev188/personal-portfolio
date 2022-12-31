@@ -30,6 +30,6 @@ Besides above technologies, I used some other helpful libraries such as:
 
 ## Run the project in your local machine
 
-1. Clone the project by using `git clone [url]`
+1. Clone the project by using `git clone https://github.com/chrisdev188/personal-portfolio.git`
 2. Navigate to the project folder and run `npm install` to install project dependencies.
 3. Then run `npm run dev` to open project in your local browser.
