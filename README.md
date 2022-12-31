@@ -27,7 +27,6 @@ Besides above technologies, I used some other helpful libraries such as:
 
 - `react-scroll` for smooth scrolling to each sections of the website.
 - `react-toastify` for beautiful, elegant and reusable Toast component.
-- `email-js` for managing emails.
 
 ## Run the project in your local machine
 
