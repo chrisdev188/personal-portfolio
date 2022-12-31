@@ -1,5 +1,6 @@
 import { TbArrowRight } from "react-icons/tb";
 import { FaPaperPlane } from "react-icons/fa";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 import Button from "./Button";
 import Container from "./Container";
@@ -24,7 +25,13 @@ const HeroSection: React.FunctionComponent<IHeroSectionProps> = (props) => {
               with the power of code.
             </Text>
             <Flex style={{ paddingTop: "1rem" }} wrap="wrap">
-              <Button as="a" href="/portfolio">
+              <Button
+                as={Link}
+                to="projects"
+                spy={true}
+                smooth={true}
+                style={{ cursor: "pointer" }}
+              >
                 <span>view my work</span>
                 <FaPaperPlane />
               </Button>
