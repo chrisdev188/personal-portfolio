@@ -13,9 +13,9 @@ The website showcases what I have done in the past, what I'm doing now and my pl
    5. Contact
 3. Footer
 
-## Some screenshots
+## Some project screenshots
 
-**_I will update this later_**
+!["Adiophile - Ecommerce site for selling sound devices"](./public/Audiophile.jpg)
 
 ## Technologies I used
 

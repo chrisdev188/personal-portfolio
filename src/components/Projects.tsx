@@ -14,40 +14,10 @@ const projects = [
     name: "Audiophile",
     description: "lorem text description",
     category: "ecommerce",
-    live: "live url",
-    code: "code url",
+    live: "https://audiophile-orcin.vercel.app/",
+    code: "https://github.com/chrisdev188/audiophile",
     techstacks: ["HTML", "CSS", "React", "Typescript", "Styled-components"],
-    img: "https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1562&q=80",
-  },
-  {
-    id: 2,
-    name: "Movies IMDB",
-    description: "lorem text description",
-    category: "fullstack website",
-    live: "live url",
-    code: "code url",
-    techstacks: ["HTML", "CSS", "React", "Typescript", "TailwindCSS"],
-    img: "https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1562&q=80",
-  },
-  {
-    id: 3,
-    name: "IShoes",
-    description: "lorem text description",
-    category: "ecommerce",
-    live: "live url",
-    code: "code url",
-    techstacks: ["HTML", "CSS", "React", "Typescript"],
-    img: "https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1562&q=80",
-  },
-  {
-    id: 4,
-    name: "IMarkdown",
-    description: "lorem text description",
-    category: "web application",
-    live: "live url",
-    code: "code url",
-    techstacks: ["HTML", "CSS", "React", "Typescript"],
-    img: "https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1562&q=80",
+    img: "./Audiophile.jpg",
   },
 ];
 
@@ -82,8 +52,15 @@ const Projects = () => {
                       Ut ullam animi saepe libero corrupti quaerat!
                     </Text>
                     <ProjectActions wrap="wrap">
-                      <Button>live preview</Button>
-                      <Button variant="text">
+                      <Button as="a" href={project.live} target="_blank">
+                        live preview
+                      </Button>
+                      <Button
+                        variant="text"
+                        as="a"
+                        href={project.code}
+                        target="_blank"
+                      >
                         <span>checkout code</span>
                         <TbArrowRight />
                       </Button>
