@@ -29,8 +29,8 @@ const AboutSection = () => {
               </Text>
               <div>
                 <Text variant="body" as="p" style={{ marginBottom: "1rem" }}>
-                  I am a frontend web developer with a passion for creating
-                  intuitive and visually appealing websites.
+                  I have a passion for creating intuitive and visually appealing
+                  websites.
                 </Text>
               </div>
               <Text variant="body" as="p">
