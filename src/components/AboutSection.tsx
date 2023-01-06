@@ -29,15 +29,17 @@ const AboutSection = () => {
               </Text>
               <div>
                 <Text variant="body" as="p" style={{ marginBottom: "1rem" }}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Excepturi nihil corporis vero voluptatem porro suscipit,
-                  commodi optio beatae a expedita!
+                  Hello! My name is Chris Bui and I am a frontend web developer
+                  with a passion for creating intuitive and visually appealing
+                  websites.
                 </Text>
               </div>
               <Text variant="body" as="p">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Excepturi nihil corporis vero voluptatem porro suscipit, commodi
-                optio beatae a expedita!
+                As a new developer, I am constantly learning and striving to
+                improve my skills in order to create the best possible user
+                experiences. I am excited to showcase the projects I have worked
+                on so far and look forward to continuing to grow and develop as
+                a developer.
               </Text>
             </div>
             <div>
