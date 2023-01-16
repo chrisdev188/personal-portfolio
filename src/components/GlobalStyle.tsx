@@ -21,7 +21,7 @@ const GlobalStyle = styled.createGlobalStyle`
     --element: #17181e;
 
     /* font values */
-    --font-family: "Inter", sans-serif;
+    --font-family: "Sofia Sans", sans-serif;
 
     /* transitions */
     --ease-150: all 150ms ease;

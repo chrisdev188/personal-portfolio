@@ -85,14 +85,14 @@ const Text = styled.div<TextProps>`
     }
     if (props.variant === "body") {
       return css`
-        font-size: 1rem;
+        font-size: 1.125rem;
         font-weight: 400;
         color: #a5a5a5;
         line-height: 1.7;
         text-transform: none;
 
         @media (min-width: 768px) {
-          font-size: 1.125rem;
+          font-size: 1.25rem;
         }
       `;
     }

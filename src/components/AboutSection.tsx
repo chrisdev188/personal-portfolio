@@ -50,9 +50,21 @@ const AboutSection = () => {
                 I’m currently working on
               </Text>
               <CurrentTechs>
-                <li>React</li>
-                <li>Tailwindcss</li>
-                <li>Typescript</li>
+                <li>
+                  <Text variant="body" as="p">
+                    React
+                  </Text>
+                </li>
+                <li>
+                  <Text variant="body" as="p">
+                    Typescript
+                  </Text>
+                </li>
+                <li>
+                  <Text variant="body" as="p">
+                    Tailwindcss
+                  </Text>
+                </li>
               </CurrentTechs>
             </div>
             <div>
