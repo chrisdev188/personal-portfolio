@@ -12,12 +12,24 @@ const projects = [
   {
     id: 1,
     name: "Audiophile",
-    description: "lorem text description",
+    description:
+      "Ecommerce website for selling digital products. This is a challenge and oppotunity for me to cement my knowledge about Reactjs.",
     category: "ecommerce",
     live: "https://audiophile-orcin.vercel.app/",
     code: "https://github.com/chrisdev188/audiophile",
     techstacks: ["HTML", "CSS", "React", "Typescript", "Styled-components"],
-    img: "./Audiophile.jpg",
+    img: "./audiophile.jpg",
+  },
+  {
+    id: 2,
+    name: "Countries",
+    description:
+      "A web application to explore every countries in the world. This is a great chance for me to work with Restful api.",
+    category: "Website",
+    live: "https://rest-countries-api-chrisbui188.vercel.app/",
+    code: "https://github.com/chrisdev188/rest-countries-api",
+    techstacks: ["HTML", "CSS", "React", "Tailwindcss"],
+    img: "./countries.jpg",
   },
 ];
 
@@ -41,15 +53,16 @@ const Projects = () => {
                     <img src={project.img} alt={project.name} />
                   </ProjectCardImage>
                   <ProjectCardBody>
-                    <Text variant="overline" as="small">
-                      {project.category}
-                    </Text>
-                    <Text variant="h3" as="h3">
-                      {project.name}
-                    </Text>
+                    <div>
+                      <Text variant="overline" as="small">
+                        {project.category}
+                      </Text>
+                      <Text variant="h3" as="h3">
+                        {project.name}
+                      </Text>
+                    </div>
                     <Text variant="body" as="p">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Ut ullam animi saepe libero corrupti quaerat!
+                      {project.description}
                     </Text>
                     <ProjectActions wrap="wrap">
                       <Button as="a" href={project.live} target="_blank">
@@ -129,11 +142,16 @@ export const ProjectCard = styled(Grid)<ProjectCardProps>`
   }}
 `;
 const ProjectCardImage = styled.div`
+  img {
+    width: 100%;
+  }
+
   @media (min-width: 768px) {
     grid-column: span 6;
     height: 100%;
     img {
       height: 100%;
+      width: unset;
       object-fit: cover;
     }
   }
