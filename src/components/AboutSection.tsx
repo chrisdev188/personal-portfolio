@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import styled from "styled-components";
 import Button from "./Button";
 import Container from "./Container";
@@ -81,7 +82,15 @@ const AboutSection = () => {
               </Text>
             </div>
             <AboutActions wrap="wrap">
-              <Button>View All Projects</Button>
+              <Button
+                as={Link}
+                to="projects"
+                smooth
+                spy
+                style={{ cursor: "pointer" }}
+              >
+                View All Projects
+              </Button>
               <Button variant="outlined">Download Resume</Button>
             </AboutActions>
           </AboutText>
